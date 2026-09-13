@@ -360,8 +360,183 @@
       <div><h4>Easy exchange</h4><p>Bring it back for cleaning, resizing, or exchange — just ask us.</p></div>
     </div>
   </div>
+  <div class="section-head">
+    <h3>From our collection</h3>
+    <!-- ==================== JEWELLERY PRICE CALCULATOR ==================== -->
+<div class="calculator-section">
+  <div class="calculator-card">
 
-  <div class="section-head"><h3>Visit or contact us</h3></div>
+    <div class="calculator-head">
+      <div>
+        <h3>Jewellery Price Calculator</h3>
+        <p style="text-align:left;">
+          Calculate jewellery value, making charges, old-gold deduction &amp; SIP tax.
+        </p>
+      </div>
+
+      <p>Today's rate is automatically loaded from Maintenance.</p>
+    </div>
+
+    <div class="calc-grid">
+
+      <!-- Metal -->
+      <div class="calc-field">
+        <label for="calcMetal">Metal</label>
+        <select id="calcMetal">
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+        </select>
+      </div>
+
+      <!-- Rate -->
+      <div class="calc-field">
+        <label for="calcRate">Rate per tola (NPR)</label>
+        <input
+          type="number"
+          id="calcRate"
+          min="0"
+          step="0.01"
+          placeholder="Today's rate"
+        >
+      </div>
+
+      <!-- Weight -->
+      <div class="calc-field">
+        <label for="calcWeight">Weight</label>
+        <input
+          type="number"
+          id="calcWeight"
+          min="0"
+          step="0.001"
+          placeholder="Enter weight"
+        >
+      </div>
+
+      <!-- Weight unit -->
+      <div class="calc-field">
+        <label for="calcWeightUnit">Weight Unit</label>
+        <select id="calcWeightUnit">
+          <option value="gram">Gram</option>
+          <option value="tola">Tola</option>
+        </select>
+      </div>
+
+      <!-- Making charge -->
+      <div class="calc-field">
+        <label for="calcMaking">Making Charge</label>
+        <input
+          type="number"
+          id="calcMaking"
+          min="0"
+          step="0.01"
+          placeholder="Enter amount"
+        >
+      </div>
+
+      <!-- Making charge type -->
+      <div class="calc-field">
+        <label for="calcMakingType">Making Charge Type</label>
+        <select id="calcMakingType">
+          <option value="amount">Fixed Amount (NPR)</option>
+          <option value="percent">Percentage (%)</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Old Gold -->
+    <label class="old-gold-toggle">
+      <input type="checkbox" id="calcOldGoldCheck">
+      Deduct old gold / old jewellery
+    </label>
+
+    <div class="old-gold-box" id="calcOldGoldBox">
+
+      <div class="calc-grid">
+
+        <div class="calc-field">
+          <label for="oldGoldWeight">Old Gold Weight</label>
+          <input
+            type="number"
+            id="oldGoldWeight"
+            min="0"
+            step="0.001"
+            placeholder="Enter old gold weight"
+          >
+        </div>
+
+        <div class="calc-field">
+          <label for="oldGoldUnit">Weight Unit</label>
+          <select id="oldGoldUnit">
+            <option value="gram">Gram</option>
+            <option value="tola">Tola</option>
+          </select>
+        </div>
+
+        <div class="calc-field">
+          <label for="oldGoldRate">Old Gold Rate per tola (NPR)</label>
+          <input
+            type="number"
+            id="oldGoldRate"
+            min="0"
+            step="0.01"
+            placeholder="Same as current rate"
+          >
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Calculation result -->
+    <div class="calc-summary">
+
+      <div class="calc-row">
+        <span>Weight in tola</span>
+        <strong id="calcTolaWeight">0.0000 tola</strong>
+      </div>
+
+      <div class="calc-row">
+        <span>Metal value</span>
+        <strong id="calcMetalValue">NPR 0</strong>
+      </div>
+
+      <div class="calc-row">
+        <span>Making charges</span>
+        <strong id="calcMakingValue">NPR 0</strong>
+      </div>
+
+      <div class="calc-row deduction">
+        <span>Old gold deduction</span>
+        <strong id="calcOldGoldValue">− NPR 0</strong>
+      </div>
+
+      <div class="calc-row">
+        <span>Taxable amount</span>
+        <strong id="calcTaxable">NPR 0</strong>
+      </div>
+
+      <div class="calc-row">
+        <span>SIP Tax (0.5%)</span>
+        <strong id="calcTax">NPR 0</strong>
+      </div>
+
+      <div class="calc-final">
+        <span>Final Amount</span>
+        <strong id="calcFinal">NPR 0</strong>
+      </div>
+
+      <div class="calc-note">
+        Rate is loaded from Today's Rates in Maintenance. You can change the
+        calculator rate for an individual calculation without changing the
+        shop's saved rate. Weight conversion uses 1 tola = 11.6638 grams.
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  <div class="section-head"><h4>Visit or contact us</h4></div>
   <div class="contact-section">
     <div class="contact-grid">
       <div class="contact-card">
